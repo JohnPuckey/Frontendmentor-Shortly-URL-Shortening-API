@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap");
+/* universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  background: #fff;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #232127;
+}
+
+.links-title {
+  font-weight: 700;
+}
+
+p, a {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #9e9aa7;
+}
+
+a {
+  font-size: .9rem;
+  color: #9e9aa7;
+  text-decoration: none;
+}
+
+.links-title {
+  font-size: .9rem;
+  color: #fff;
+}
+
+img {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* header section */
+header {
+  background: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px 24px 20px;
+}
+
+nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 60px;
+  width: 100%;
+  visibility: hidden;
+}
+
+nav .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 325px;
+  height: 385px;
+  border-radius: 10px;
+  background: #3b3054;
+  padding-top: 30px;
+}
+
+nav .nav-links {
+  width: 85%;
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid #6a6675;
+}
+
+nav .nav-links .nav-link {
+  margin: 0px 0px 35px;
+}
+
+nav .nav-links .nav-link a {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+nav .nav-links .nav-link a:hover {
+  color: #232127;
+}
+
+nav .user-login {
+  list-style: none;
+  text-align: center;
+  margin: 30px 0px 0px;
+}
+
+nav .user-login .nav-link {
+  margin: 0px 0px 35px;
+}
+
+nav .user-login .nav-link a {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+nav .user-login .nav-link a:hover {
+  color: #232127;
+}
+
+nav .user-login .sign-up a {
+  padding: 10px 105px;
+  background-color: #2acfcf;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+nav .user-login .sign-up a:hover {
+  background-color: #67e0e0;
+}
+
+.menu-btn {
+  border: none;
+  background: transparent;
+  width: 24px;
+  height: 21px;
+}
+
+.menu-btn .btn-line {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #bfbfbf;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu-btn .btn-line:before,
+.menu-btn .btn-line:after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: inherit;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.menu-btn .btn-line::after {
+  top: 9px;
+}
+
+.menu-btn.close .btn-line {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.menu-btn.close .btn-line:before,
+.menu-btn.close .btn-line:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.show {
+  visibility: visible;
+}
+
+/* hero section */
+.hero {
+  background: #fff;
+}
+
+/* URL shorten section */
+/* Features Section */
+.features {
+  background: #F0F1F6;
+}
+
+/* CTA section */
+.cta {
+  background-color: #3b3054;
+}
+
+/* footer section */
+footer {
+  background-color: #232127;
+}
+/*# sourceMappingURL=main.css.map */
