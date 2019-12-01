@@ -89,19 +89,22 @@
       <div class="bg-top"></div>
       <div class="shortener">
 
-        <form class="shorten-url" action="">
-          <input class="input-url" type="text" placeholder="Shorten a link here...">
+        <form id="shortenURL" class="shorten-url" name="urlForm">
+          <input id="url" class="input-url" type="text" placeholder="Shorten a link here...">
+          <div id="error-msg"></div>
 
-          <button class="submit-btn">
+          <button id="submit-btn" class="submit-btn" type="submit">
             Shorten It!
           </button>
         </form>
 
       </div>
       <div class="bg-bottom"></div>
-
     </div>
+  </div>
 
+  <div class="short-links">
+    
   </div>
 
   <div class="features">

@@ -85,7 +85,7 @@ a {
 
         img {
             position: absolute;
-            height: 320px;
+            height: 310px;
             left: 30px;
         }
     }
@@ -116,6 +116,39 @@ a {
 
 @import 'shorten';
 
+/* short-links */
+
+.short-links {
+    background: #F0F1F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0 0;
+        width: 325px;
+        height: max-content;
+        border-radius: 10px;
+        background: #fff;
+
+        .item-link {
+            margin: 10px 15px;
+            cursor: pointer;
+            color: color(neutral-vdarkviolet);
+        }
+
+        .item-shortlink {
+            margin: 10px 15px;
+            cursor: pointer;
+            color: color(primary-cyan);
+
+
+        }
+    }
+}
 
 /* Features Section */
 
@@ -164,10 +197,6 @@ a {
             width: 90px;
             height: 90px;
             border-radius: 50%;
-        }
-
-        .card-image-img {
-
         }
 
         h3 {

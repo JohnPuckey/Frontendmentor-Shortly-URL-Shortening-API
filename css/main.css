@@ -79,7 +79,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 40px 24px 20px;
+  margin: 40px 30px 20px;
 }
 
 nav {
@@ -107,7 +107,7 @@ nav .nav-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 325px;
+  width: 330px;
   height: 385px;
   border-radius: 10px;
   background: #3b3054;
@@ -247,7 +247,7 @@ nav .user-login .sign-up:hover {
 
 .hero .hero-image img {
   position: absolute;
-  height: 320px;
+  height: 310px;
   left: 30px;
 }
 
@@ -353,7 +353,9 @@ nav .user-login .sign-up:hover {
   background-repeat: no-repeat;
   background-position: top right;
   width: 325px;
-  min-height: 160px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 10px;
 }
 
@@ -365,6 +367,10 @@ nav .user-login .sign-up:hover {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+}
+
+.shortener .shorten-url .input-url.error {
+  border: 3px solid #f46262;
 }
 
 .shortener .shorten-url ::-webkit-input-placeholder {
@@ -383,8 +389,18 @@ nav .user-login .sign-up:hover {
   opacity: .6;
 }
 
+.shortener .shorten-url #error-msg {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #f46262;
+  margin-left: 25px;
+  margin-top: 5px;
+  font-size: .8rem;
+  display: none;
+}
+
 .shortener .shorten-url .submit-btn {
-  margin: 15px 0 0;
+  margin: 15px 0 25px;
   width: 280px;
   height: 50px;
   border: none;
@@ -398,6 +414,53 @@ nav .user-login .sign-up:hover {
 
 .shortener .shorten-url .submit-btn:hover {
   background-color: #67e0e0;
+}
+
+/* short-links */
+.short-links {
+  background: #F0F1F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.short-links .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 0 0;
+  width: 325px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.short-links .item .item-link {
+  margin: 10px 15px;
+  cursor: pointer;
+  color: #232127;
+}
+
+.short-links .item .item-shortlink {
+  margin: 10px 15px;
+  cursor: pointer;
+  color: #2acfcf;
 }
 
 /* Features Section */

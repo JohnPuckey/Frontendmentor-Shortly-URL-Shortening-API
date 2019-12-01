@@ -42,7 +42,7 @@
         background-repeat: no-repeat;
         background-position: top right;
         width: 325px;
-        min-height: 160px;
+        height: max-content;
         border-radius: 10px;
 
         .input-url {
@@ -53,15 +53,28 @@
             border: none;
             border-radius: 5px;
             font-size: 1rem;
+
+            &.error {
+                border: 3px solid color(secondary-red);
+            }
+
         }
 
         ::placeholder {
             opacity: .6;
         }
-        
+
+        #error-msg {
+            align-self: flex-start;
+            color: color(secondary-red);
+            margin-left: 25px;
+            margin-top: 5px;
+            font-size: .8rem;
+            display: none;
+        }
 
         .submit-btn {
-            margin: 15px 0 0;
+            margin: 15px 0 25px;
             width: 280px;
             height: 50px;
             border: none;
@@ -77,4 +90,6 @@
             background-color: lighten(color(primary-cyan), 15%);
         }
     }
+
+    
 }
