@@ -452,15 +452,58 @@ nav .user-login .sign-up:hover {
 }
 
 .short-links .item .item-link {
-  margin: 10px 15px;
+  margin: 0px 0px;
   cursor: pointer;
   color: #232127;
+  width: 100%;
+  border-bottom: 1px solid #bfbfbf;
+  padding: 15px 15px;
 }
 
 .short-links .item .item-shortlink {
-  margin: 10px 15px;
+  padding: 15px 15px;
   cursor: pointer;
   color: #2acfcf;
+}
+
+.short-links .item .copy-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 295px;
+  height: 40px;
+  margin: 0px 0px 15px;
+  border: none;
+  background-color: #2acfcf;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.short-links .item .copy-btn:hover {
+  background-color: #67e0e0;
+}
+
+.short-links .item .copied-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 295px;
+  height: 40px;
+  margin: 0px 0px 15px;
+  border: none;
+  background-color: #3b3054;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.short-links .item .copied-btn:hover {
+  background-color: #5c4c85;
 }
 
 /* Features Section */

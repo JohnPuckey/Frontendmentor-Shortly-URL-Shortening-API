@@ -135,17 +135,54 @@ a {
         background: #fff;
 
         .item-link {
-            margin: 10px 15px;
+            margin: 0px 0px;
             cursor: pointer;
             color: color(neutral-vdarkviolet);
+            width: 100%;
+            border-bottom: 1px solid color(neutral-gray);
+            padding: 15px 15px;
         }
 
         .item-shortlink {
-            margin: 10px 15px;
+            padding: 15px 15px;
             cursor: pointer;
             color: color(primary-cyan);
+        }
 
+        .copy-btn {
+            align-self: center;
+            width: 295px;
+            height: 40px;
+            margin: 0px 0px 15px;
+            border: none;
+            background-color: color(primary-cyan);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
 
+        .copy-btn:hover {
+            background-color: lighten(color(primary-cyan), 15%);
+        }
+
+        .copied-btn {
+            align-self: center;
+            width: 295px;
+            height: 40px;
+            margin: 0px 0px 15px;
+            border: none;
+            background-color: color(primary-darkviolet);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .copied-btn:hover {
+            background-color: lighten(color(primary-darkviolet), 15%);
         }
     }
 }

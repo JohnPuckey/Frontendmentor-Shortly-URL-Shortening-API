@@ -56,6 +56,7 @@ function Validate() {
 
 document.getElementById('shortenURL').addEventListener('submit', shortenLink);
 
+
 function shortenLink(event) {
     event.preventDefault();
     Validate() // check input field contains a URL
@@ -127,8 +128,8 @@ function showShortLinks(link, shortLink) {
     container.insertAdjacentHTML("afterbegin", `
     <div class="item">
     <a href="${link}" class="item-link">${link}</a>
-    <a href="${shortLink}" class="item-shortlink">${shortLink}</a>
-    <button class="copy-btn">Copy</button>
+    <a href="${shortLink}" id="shortLink" class="item-shortlink">${shortLink}</a>
+    <button id="copy" class="copy-btn">Copy</button>
     </div>
     `)
 }
@@ -142,7 +143,33 @@ function getLinks() {
     items.forEach(i => {
         console.log(i)
         showShortLinks(i.link, i.shortLink)
+
+        setCopyBtn()
     })
 }
 
-getLinks() // show stored short links
+function setCopyBtn() {
+    let copyBtn = document.querySelectorAll("#copy")
+    // add event listener on click to all generated copy buttons
+    copyBtn.forEach(e => e.addEventListener("click", copyLink))
+}
+
+function copyLink(e) {
+
+    // copy link
+    
+    let textarea = document.createElement("textarea") // create textarea element
+    textarea.value = e.target.previousSibling.previousSibling.innerText // set value of text area
+    document.body.appendChild(textarea) // append textarea to html document
+
+    textarea.select() // select textarea contents
+    document.execCommand("copy") // copy only works as part of an event action i.e click
+    document.body.removeChild(textarea) // remove textarea from html document
+
+    // update button styles
+
+    e.target.innerHTML = "Copied"
+    e.target.classList.add("copied-btn")
+}
+
+getLinks() // show stored short links on page load
