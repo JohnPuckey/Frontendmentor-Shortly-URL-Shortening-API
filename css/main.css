@@ -239,7 +239,7 @@ nav .user-login .sign-up:hover {
 .hero .hero-image img {
   position: absolute;
   height: 310px;
-  left: 30px;
+  right: -126px;
 }
 
 .hero .hero-text {
@@ -343,7 +343,8 @@ nav .user-login .sign-up:hover {
   background-image: url(../images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
-  width: 325px;
+  width: 100%;
+  max-width: 325px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -434,7 +435,8 @@ nav .user-login .sign-up:hover {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 20px 0 0;
-  width: 325px;
+  width: 100%;
+  max-width: 325px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -536,10 +538,12 @@ nav .user-login .sign-up:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 325px;
+  width: 100%;
+  max-width: 325px;
   text-align: center;
   background-color: #fff;
   z-index: 2;
+  border-radius: 5px;
 }
 
 .cards .card .card-image {
@@ -747,7 +751,405 @@ footer .social-links .social-link:hover .social-icon {
   .menu-btn {
     display: none;
   }
+  /* desktop hero section */
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 1fr;
+        grid-template-columns: 50% 1fr;
+    background: #fff;
+    margin-top: 60px;
+  }
+  .hero .hero-image {
+    position: relative;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  .hero .hero-image img {
+    position: absolute;
+    height: 400px;
+    right: -150px;
+  }
+  .hero .hero-text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    margin: 50px 0 35px 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  .hero .hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0px;
+    line-height: 4.5rem;
+    width: 420px;
+  }
+  .hero .hero-text p {
+    font-size: 1.1rem;
+    width: 420px;
+    margin-bottom: 30px;
+  }
+  /* Desktop - URL shortener section */
+  .shortener .shorten-url {
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-image: url(../images/bg-shorten-desktop.svg);
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 105px;
+  }
+  .shortener .shorten-url .input-url {
+    margin: 50px 24px 50px 65px;
+    padding: 0 20px;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+  }
+  .shortener .shorten-url #error-msg {
+    position: absolute;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    text-align: left;
+    left: 44px;
+    top: 115px;
+    z-index: 2;
+    font-size: .8rem;
+    display: none;
+  }
+  .shortener .shorten-url .submit-btn {
+    margin: 50px 65px 50px 0px;
+    width: 280px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  /* Desktop - shortlinks */
+  .short-links {
+    padding: 0 105px;
+  }
+  .short-links .item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 40px 105px 0px 105px;
+    width: 100%;
+    max-width: 1110px;
+  }
+  .short-links .item .item-link {
+    text-align: left;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0px auto 0px 0px;
+    border-bottom: none;
+    padding: 0px 30px;
+  }
+  .short-links .item .item-shortlink {
+    padding: 0px 15px;
+  }
+  .short-links .item .copy-btn {
+    width: 170px;
+    margin: 15px 20px 15px;
+  }
+  /*  Desktop Features Section */
+  .features {
+    padding-top: 125px;
+  }
+  .features .features-head h2 {
+    font-size: 2.5rem;
+  }
+  .features .features-head p {
+    font-size: 1.1rem;
+    width: 520px;
+  }
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 0px 200px;
+  }
+  .cards .card {
+    margin: 0 10px 90px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 300px;
+    text-align: left;
+  }
+  .cards .card .card-image {
+    top: -45px;
+    left: 30px;
+  }
+  .cards .card h3 {
+    margin: 80px 30px 0px;
+  }
+  .cards .card p {
+    margin: 25px 30px 40px;
+  }
+  .cards .card:nth-of-type(1) {
+    top: 10px;
+  }
+  .cards .card:nth-of-type(2) {
+    top: 55px;
+  }
+  .cards .card:nth-of-type(3) {
+    top: 100px;
+  }
+  .cards .line {
+    position: absolute;
+    z-index: 0;
+    width: 900px;
+    height: 8px;
+    background-color: #2acfcf;
+  }
+  /* Desktop - CTA section */
+  .cta {
+    background-image: url(../images/bg-boost-desktop.svg);
+    background-size: cover;
+  }
+  .cta h2 {
+    font-size: 2.5rem;
+    margin: 65px 0 24px;
+  }
+  .cta a {
+    margin-bottom: 50px;
+  }
+  /* Desktop - footer Section */
+  footer {
+    background-color: #232127;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 70px 100px;
+  }
+  footer .footer-links {
+    text-align: left;
+  }
+  footer .footer-links .links-title {
+    margin-top: 0px;
+  }
+  footer .social-links {
+    margin-top: 0px;
+  }
+  footer .social-links .social-link {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
 }
 
 /* large screens */
+@media screen and (min-width: 1330px) {
+  /* large screen header section */
+  header {
+    margin: 55px 165px 20px;
+  }
+  /* desktop hero section */
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 1fr;
+        grid-template-columns: 50% 1fr;
+    background: #fff;
+    margin-top: 60px;
+  }
+  .hero .hero-image {
+    position: relative;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+  }
+  .hero .hero-image img {
+    position: absolute;
+    height: 480px;
+    right: -124px;
+  }
+  .hero .hero-text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    margin: 50px 0 35px 165px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  .hero .hero-text h1 {
+    font-size: 4.7rem;
+    margin-bottom: 0px;
+    line-height: 5.2rem;
+    width: 560px;
+  }
+  .hero .hero-text p {
+    font-size: 1.35rem;
+    width: 530px;
+    margin-bottom: 30px;
+  }
+  /* Desktop - URL shortener section */
+  .shortener .shorten-url {
+    margin: 0 165px;
+  }
+  /* Desktop - shortlinks */
+  .short-links {
+    padding: 0 165px;
+  }
+  cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 0px 200px;
+  }
+  cards .card {
+    margin: 0 10px 90px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 300px;
+    text-align: left;
+  }
+  cards .card .card-image {
+    top: -45px;
+    left: 30px;
+  }
+  cards .card h3 {
+    margin: 80px 30px 0px;
+  }
+  cards .card p {
+    margin: 25px 30px 40px;
+  }
+  cards .card:nth-of-type(1) {
+    top: 10px;
+  }
+  cards .card:nth-of-type(2) {
+    top: 55px;
+  }
+  cards .card:nth-of-type(3) {
+    top: 100px;
+  }
+  cards .line {
+    position: absolute;
+    z-index: 0;
+    width: 900px;
+    height: 8px;
+    background-color: #2acfcf;
+  }
+  /* large screen - feature section */
+  .cards .card {
+    margin: 0 18px 90px;
+    width: 350px;
+  }
+  /* Large screens - footer Section */
+  footer {
+    padding: 70px 165px;
+  }
+  footer .footer-links {
+    text-align: left;
+  }
+  footer .social-links .social-link {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
 /*# sourceMappingURL=main.css.map */

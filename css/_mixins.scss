@@ -11,7 +11,7 @@
 }
 
 @mixin mediaXL {
-    @media screen and (min-width: 1240px) {
+    @media screen and (min-width: 1330px) {
         @content;
     }
 }
@@ -20,7 +20,7 @@
 
 /* desktops and laptops */
 
-@include mediaLg{
+@include mediaLg {
 
     /* desktop header section */
 
@@ -31,13 +31,13 @@
         justify-content: left;
         margin: 55px 100px 20px;
     }
-    
+
     nav {
         position: relative;
         top: 0px;
         width: 100%;
         visibility: visible;
-    
+
         .nav-container {
             display: flex;
             flex-direction: row;
@@ -50,7 +50,7 @@
             padding: 0;
 
         }
-    
+
         .nav-links {
             width: auto;
             list-style: none;
@@ -60,36 +60,37 @@
 
             .nav-link {
                 margin: 0px 0px 0px 45px;
-    
+
                 a {
                     color: color(neutral-grayviolet);
                     font-size: 1rem;
                 }
-    
+
                 a:hover {
                     color: color(primary-cyan);
                 }
             }
         }
-    
+
         .user-login {
             list-style: none;
             display: inline-flex;
             margin: 0;
-    
+
             .nav-link {
-    
+
                 a {
                     color: color(neutral-grayviolet);
                     font-size: 1rem;
 
                 }
-    
+
                 a:hover {
                     color: color(primary-cyan);
                 }
-    
+
             }
+
             .sign-up {
                 padding: 10px 25px;
                 margin-left: 35px;
@@ -97,21 +98,420 @@
                 border-radius: 25px;
                 color: #fff;
                 font-size: 1rem;
-
-
             }
-    
+
             .sign-up:hover {
                 background-color: lighten(color(primary-cyan), 15%);
             }
         }
     }
-    
+
     .menu-btn {
         display: none;
     }
-    
+
+    /* desktop hero section */
+
+
+    .hero {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        background: #fff;
+        margin-top: 60px;
+
+        .hero-image {
+            position: relative;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+
+
+            img {
+                position: absolute;
+                height: 400px;
+                right: -150px;
+            }
+        }
+
+        .hero-text {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            margin: 50px 0 35px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+
+            h1 {
+                font-size: 3.5rem;
+                margin-bottom: 0px;
+                line-height: 4.5rem;
+                width: 420px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                width: 420px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    /* Desktop - URL shortener section */
+
+    .shortener .shorten-url {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-image: url(../images/bg-shorten-desktop.svg);
+        width: 100%;
+        max-width: 1110px;
+        margin: 0 105px;
+
+        .input-url {
+            margin: 50px 24px 50px 65px;
+            padding: 0 20px;
+            width: 100%;
+            height: 60px;
+            border-radius: 10px;
+            font-size: 1.3rem;
+        }
+
+        #error-msg {
+            position: absolute;
+            align-self: flex-end;
+            text-align: left;
+            left: 44px;
+            top: 115px;
+            z-index: 2;
+            font-size: .8rem;
+            display: none;
+        }
+
+        .submit-btn {
+            margin: 50px 65px 50px 0px;
+            width: 280px;
+            height: 60px;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    /* Desktop - shortlinks */
+
+    .short-links {
+        padding: 0 105px;
+
+        .item {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 40px 105px 0px 105px;
+            width: 100%;
+            max-width: 1110px;
+
+            .item-link {
+                text-align: left;
+                width: max-content;
+                margin: 0px auto 0px 0px;
+                border-bottom: none;
+                padding: 0px 30px;
+            }
+
+            .item-shortlink {
+                padding: 0px 15px;
+            }
+
+            .copy-btn {
+                width: 170px;
+                margin: 15px 20px 15px;
+            }
+        }
+    }
+
+
+    /*  Desktop Features Section */
+
+    .features {
+        padding-top: 125px;
+
+        .features-head {
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+                width: 520px;
+            }
+        }
+    }
+
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px 200px;
+
+        .card {
+            margin: 0 10px 90px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 300px;
+            text-align: left;
+
+            .card-image {
+                top: -45px;
+                left: 30px;
+            }
+
+            h3 {
+                margin: 80px 30px 0px;
+            }
+
+            p {
+                margin: 25px 30px 40px;
+            }
+        }
+
+        .card:nth-of-type(1) {
+            top: 10px;
+        }
+
+        .card:nth-of-type(2) {
+            top: 55px;
+        }
+
+        .card:nth-of-type(3) {
+            top: 100px;
+        }
+
+        .line {
+            position: absolute;
+            z-index: 0;
+            width: 900px;
+            height: 8px;
+            background-color: color(primary-cyan);
+        }
+    }
+
+    /* Desktop - CTA section */
+
+    .cta {
+        background-image: url(../images/bg-boost-desktop.svg);
+        background-size: cover;
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 65px 0 24px;
+        }
+
+        a {
+            margin-bottom: 50px;
+        }
+    }
+
+
+    /* Desktop - footer Section */
+
+    footer {
+        background-color: color(neutral-vdarkviolet);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 70px 100px;
+
+        .footer-links {
+            text-align: left;
+
+            .links-title{
+                margin-top: 0px;
+            }
+        }
+
+        .social-links {
+            margin-top: 0px;
+
+            .social-link {
+                margin: 0 5px;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+
+
+    }
 
 }
 
 /* large screens */
+
+@include mediaXL {
+
+    /* large screen header section */
+
+    header {
+        margin: 55px 165px 20px;
+    }
+
+    /* desktop hero section */
+
+
+    .hero {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        background: #fff;
+        margin-top: 60px;
+
+        .hero-image {
+            position: relative;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+
+
+            img {
+                position: absolute;
+                height: 480px;
+                right: -124px;
+            }
+        }
+
+        .hero-text {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            margin: 50px 0 35px 165px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+
+            h1 {
+                font-size: 4.7rem;
+                margin-bottom: 0px;
+                line-height: 5.2rem;
+                width: 560px;
+            }
+
+            p {
+                font-size: 1.35rem;
+                width: 530px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    /* Desktop - URL shortener section */
+
+    .shortener .shorten-url {
+        margin: 0 165px;
+
+    }
+
+    /* Desktop - shortlinks */
+
+    .short-links {
+        padding: 0 165px;
+
+    }
+
+    cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px 200px;
+
+        .card {
+            margin: 0 10px 90px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 300px;
+            text-align: left;
+
+            .card-image {
+                top: -45px;
+                left: 30px;
+            }
+
+            h3 {
+                margin: 80px 30px 0px;
+            }
+
+            p {
+                margin: 25px 30px 40px;
+            }
+        }
+
+        .card:nth-of-type(1) {
+            top: 10px;
+        }
+
+        .card:nth-of-type(2) {
+            top: 55px;
+        }
+
+        .card:nth-of-type(3) {
+            top: 100px;
+        }
+
+        .line {
+            position: absolute;
+            z-index: 0;
+            width: 900px;
+            height: 8px;
+            background-color: color(primary-cyan);
+        }
+    }
+
+    /* large screen - feature section */
+
+    .cards {
+
+        .card {
+            margin: 0 18px 90px;
+            width: 350px;
+
+        }
+    }
+
+
+
+        /* Large screens - footer Section */
+
+        footer {
+            padding: 70px 165px;
+    
+            .footer-links {
+                text-align: left;
+            }
+    
+            .social-links {
+    
+                .social-link {
+                    margin: 0 5px;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+    
+    
+        }
+
+}
