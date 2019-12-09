@@ -239,7 +239,7 @@ nav .user-login .sign-up:hover {
 .hero .hero-image img {
   position: absolute;
   height: 310px;
-  right: -126px;
+  left: 30px;
 }
 
 .hero .hero-text {
@@ -663,7 +663,93 @@ footer .social-links .social-link:hover .social-icon {
 }
 
 /* Media Queries */
+/* large Phones */
+@media screen and (min-width: 538px) and (max-width: 767px) {
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1f;
+        grid-template-columns: 1f;
+    background: #fff;
+  }
+  .hero .hero-image {
+    position: relative;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    width: 100vw;
+    height: 384px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero .hero-image img {
+    position: relative;
+    height: 310px;
+    margin-left: -60px;
+  }
+}
+
 /* tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* desktop hero section */
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 1fr;
+        grid-template-columns: 50% 1fr;
+    background: #fff;
+    margin-top: 60px;
+  }
+  .hero .hero-image {
+    position: relative;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+  .hero .hero-image img {
+    position: absolute;
+    height: 320px;
+    left: 30px;
+  }
+  .hero .hero-text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    margin: 30px 0 30px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  .hero .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0px;
+    line-height: 3.5rem;
+    width: 420px;
+  }
+  .hero .hero-text p {
+    font-size: .9rem;
+    width: 350px;
+    margin-bottom: 20px;
+  }
+}
+
 /* desktops and laptops */
 @media screen and (min-width: 992px) {
   /* desktop header section */
@@ -800,7 +886,7 @@ footer .social-links .social-link:hover .social-icon {
   .hero .hero-text h1 {
     font-size: 3.5rem;
     margin-bottom: 0px;
-    line-height: 4.5rem;
+    line-height: 4.2rem;
     width: 420px;
   }
   .hero .hero-text p {
@@ -1035,7 +1121,7 @@ footer .social-links .social-link:hover .social-icon {
   .hero .hero-image img {
     position: absolute;
     height: 480px;
-    right: -124px;
+    left: 110px;
   }
   .hero .hero-text {
     -ms-grid-row: 1;
@@ -1076,7 +1162,7 @@ footer .social-links .social-link:hover .social-icon {
   .short-links {
     padding: 0 165px;
   }
-  cards {
+  .cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1092,7 +1178,7 @@ footer .social-links .social-link:hover .social-icon {
             align-items: center;
     padding: 0px 0px 200px;
   }
-  cards .card {
+  .cards .card {
     margin: 0 10px 90px;
     position: relative;
     display: -webkit-box;
@@ -1108,26 +1194,26 @@ footer .social-links .social-link:hover .social-icon {
     width: 300px;
     text-align: left;
   }
-  cards .card .card-image {
+  .cards .card .card-image {
     top: -45px;
     left: 30px;
   }
-  cards .card h3 {
+  .cards .card h3 {
     margin: 80px 30px 0px;
   }
-  cards .card p {
+  .cards .card p {
     margin: 25px 30px 40px;
   }
-  cards .card:nth-of-type(1) {
+  .cards .card:nth-of-type(1) {
     top: 10px;
   }
-  cards .card:nth-of-type(2) {
+  .cards .card:nth-of-type(2) {
     top: 55px;
   }
-  cards .card:nth-of-type(3) {
+  .cards .card:nth-of-type(3) {
     top: 100px;
   }
-  cards .line {
+  .cards .line {
     position: absolute;
     z-index: 0;
     width: 900px;

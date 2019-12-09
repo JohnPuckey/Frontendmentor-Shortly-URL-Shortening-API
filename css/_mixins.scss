@@ -1,3 +1,9 @@
+@mixin mediaSm {
+    @media screen and (min-width: 538px) and (max-width: 767px) {
+        @content;
+    }
+}
+
 @mixin mediaMd {
     @media screen and (min-width: 768px) and (max-width: 991px) {
         @content;
@@ -16,7 +22,88 @@
     }
 }
 
+/* large Phones */
+
+@include mediaSm {
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1f;
+        background: #fff;
+    
+        .hero-image {
+            position: relative;
+            grid-row: 1 / 2;
+            width: 100vw;
+            height: 384px;
+            overflow: hidden;
+            text-align: center;
+    
+            img {
+                position: relative;
+                height: 310px;
+                margin-left: -60px;
+            }
+        }
+    
+    }
+
+}
+
 /* tablets */
+
+@include mediaMd {
+
+        /* desktop hero section */
+
+
+        .hero {
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            background: #fff;
+            margin-top: 60px;
+    
+            .hero-image {
+                position: relative;
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                width: 100%;
+                height: 320px;
+                overflow: hidden;
+    
+    
+                img {
+                    position: absolute;
+                    height: 320px;
+                    left: 30px;
+                }
+            }
+    
+            .hero-text {
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                margin: 30px 0 30px 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+    
+                h1 {
+                    font-size: 3rem;
+                    margin-bottom: 0px;
+                    line-height: 3.5rem;
+                    width: 420px;
+                }
+    
+                p {
+                    font-size: .9rem;
+                    width: 350px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+}
 
 /* desktops and laptops */
 
@@ -147,7 +234,7 @@
             h1 {
                 font-size: 3.5rem;
                 margin-bottom: 0px;
-                line-height: 4.5rem;
+                line-height: 4.2rem;
                 width: 420px;
             }
 
@@ -387,7 +474,7 @@
             img {
                 position: absolute;
                 height: 480px;
-                right: -124px;
+                left: 110px;
             }
         }
 
@@ -429,7 +516,7 @@
 
     }
 
-    cards {
+    .cards {
         display: flex;
         flex-direction: row;
         justify-content: center;
