@@ -673,25 +673,30 @@ footer .social-links .social-link:hover .social-icon {
     background: #fff;
   }
   .hero .hero-image {
-    position: relative;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
-    width: 100vw;
-    height: 384px;
-    overflow: hidden;
     text-align: center;
   }
   .hero .hero-image img {
     position: relative;
     height: 310px;
-    margin-left: -60px;
+    left: unset;
   }
 }
 
 /* tablets */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  /* desktop hero section */
+  /* Tablet header Section */
+  header {
+    background: #fff;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 55px 60px 20px;
+  }
+  /* Tablet hero section */
   .hero {
     display: -ms-grid;
     display: grid;
@@ -724,7 +729,7 @@ footer .social-links .social-link:hover .social-icon {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
-    margin: 30px 0 30px 30px;
+    margin: 30px 0 30px 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -748,11 +753,22 @@ footer .social-links .social-link:hover .social-icon {
     width: 350px;
     margin-bottom: 20px;
   }
+  /* Tablet - CTA section */
+  .cta {
+    background-image: url(../images/bg-boost-desktop.svg);
+    background-size: cover;
+  }
+  .cta h2 {
+    margin: 65px 0 24px;
+  }
+  .cta a {
+    margin-bottom: 50px;
+  }
 }
 
 /* desktops and laptops */
 @media screen and (min-width: 992px) {
-  /* desktop header section */
+  /* Desktop header section */
   header {
     background: #fff;
     position: relative;
@@ -837,7 +853,7 @@ footer .social-links .social-link:hover .social-icon {
   .menu-btn {
     display: none;
   }
-  /* desktop hero section */
+  /* Desktop hero section */
   .hero {
     display: -ms-grid;
     display: grid;
@@ -1097,7 +1113,7 @@ footer .social-links .social-link:hover .social-icon {
   header {
     margin: 55px 165px 20px;
   }
-  /* desktop hero section */
+  /* large screen  hero section */
   .hero {
     display: -ms-grid;
     display: grid;
@@ -1154,11 +1170,11 @@ footer .social-links .social-link:hover .social-icon {
     width: 530px;
     margin-bottom: 30px;
   }
-  /* Desktop - URL shortener section */
+  /* large screen  - URL shortener section */
   .shortener .shorten-url {
     margin: 0 165px;
   }
-  /* Desktop - shortlinks */
+  /* large screen  - shortlinks */
   .short-links {
     padding: 0 165px;
   }

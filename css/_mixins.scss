@@ -30,22 +30,18 @@
         display: grid;
         grid-template-columns: 1f;
         background: #fff;
-    
+
         .hero-image {
-            position: relative;
-            grid-row: 1 / 2;
-            width: 100vw;
-            height: 384px;
-            overflow: hidden;
+
             text-align: center;
-    
+
             img {
                 position: relative;
                 height: 310px;
-                margin-left: -60px;
+                left: unset;
             }
         }
-    
+
     }
 
 }
@@ -54,54 +50,79 @@
 
 @include mediaMd {
 
-        /* desktop hero section */
+    /* Tablet header Section */
+
+    header {
+        background: #fff;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 55px 60px 20px;
+    }
+
+    /* Tablet hero section */
+
+    .hero {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        background: #fff;
+        margin-top: 60px;
+
+        .hero-image {
+            position: relative;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
 
 
-        .hero {
-            display: grid;
-            grid-template-columns: 50% 1fr;
-            background: #fff;
-            margin-top: 60px;
-    
-            .hero-image {
-                position: relative;
-                grid-column: 2 / 3;
-                grid-row: 1 / 2;
-                width: 100%;
+            img {
+                position: absolute;
                 height: 320px;
-                overflow: hidden;
-    
-    
-                img {
-                    position: absolute;
-                    height: 320px;
-                    left: 30px;
-                }
-            }
-    
-            .hero-text {
-                grid-row: 1 / 2;
-                grid-column: 1 / 2;
-                margin: 30px 0 30px 30px;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-    
-                h1 {
-                    font-size: 3rem;
-                    margin-bottom: 0px;
-                    line-height: 3.5rem;
-                    width: 420px;
-                }
-    
-                p {
-                    font-size: .9rem;
-                    width: 350px;
-                    margin-bottom: 20px;
-                }
+                left: 30px;
             }
         }
+
+        .hero-text {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            margin: 30px 0 30px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 0px;
+                line-height: 3.5rem;
+                width: 420px;
+            }
+
+            p {
+                font-size: .9rem;
+                width: 350px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    /* Tablet - CTA section */
+
+    .cta {
+        background-image: url(../images/bg-boost-desktop.svg);
+        background-size: cover;
+
+        h2 {
+            margin: 65px 0 24px;
+        }
+
+        a {
+            margin-bottom: 50px;
+        }
+    }
+
 
 }
 
@@ -109,7 +130,7 @@
 
 @include mediaLg {
 
-    /* desktop header section */
+    /* Desktop header section */
 
     header {
         background: #fff;
@@ -197,7 +218,7 @@
         display: none;
     }
 
-    /* desktop hero section */
+    /* Desktop hero section */
 
 
     .hero {
@@ -423,7 +444,7 @@
         .footer-links {
             text-align: left;
 
-            .links-title{
+            .links-title {
                 margin-top: 0px;
             }
         }
@@ -453,7 +474,7 @@
         margin: 55px 165px 20px;
     }
 
-    /* desktop hero section */
+    /* large screen  hero section */
 
 
     .hero {
@@ -502,14 +523,13 @@
         }
     }
 
-    /* Desktop - URL shortener section */
+    /* large screen  - URL shortener section */
 
     .shortener .shorten-url {
         margin: 0 165px;
-
     }
 
-    /* Desktop - shortlinks */
+    /* large screen  - shortlinks */
 
     .short-links {
         padding: 0 165px;
@@ -574,31 +594,27 @@
         .card {
             margin: 0 18px 90px;
             width: 350px;
-
         }
     }
 
 
 
-        /* Large screens - footer Section */
+    /* Large screens - footer Section */
 
-        footer {
-            padding: 70px 165px;
-    
-            .footer-links {
-                text-align: left;
-            }
-    
-            .social-links {
-    
-                .social-link {
-                    margin: 0 5px;
-                    padding: 10px;
-                    cursor: pointer;
-                }
-            }
-    
-    
+    footer {
+        padding: 70px 165px;
+
+        .footer-links {
+            text-align: left;
         }
 
+        .social-links {
+
+            .social-link {
+                margin: 0 5px;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+    }
 }
